@@ -1,3 +1,41 @@
-<html>
-  <body>Hello World!</body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Cenmed!</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="h-screen flex flex-col">
+
+    <!-- Iframe Section -->
+    <iframe id="contentFrame" class="flex-grow w-full" src="https://chat.cenmed.com/chat/1hue24e5o" frameborder="0"></iframe>
+
+    <!-- Button Section -->
+    <div class="h-[20%] flex w-full border-t border-gray-300">
+        <button onclick="loadPage('https://chat.cenmed.com/chat/1hue24e5o')" class="w-1/4 bg-blue-500 text-white font-bold flex flex-col justify-center items-center">
+            <span class="text-lg">1</span>
+            <span>Support</span>
+        </button>
+        <button onclick="loadPage('https://cenmed.com')" class="w-1/4 bg-green-500 text-white font-bold flex flex-col justify-center items-center">
+            <span class="text-lg">2</span>
+            <span>Shop</span>
+        </button>
+        <button onclick="loadPage('https://cenmed.com/account.php')" class="w-1/4 bg-yellow-500 text-white font-bold flex flex-col justify-center items-center">
+            <span class="text-lg">3</span>
+            <span>My Account</span>
+        </button>
+        <button onclick="loadPage('https://cenmed.com/cart.php')" class="w-1/4 bg-red-500 text-white font-bold flex flex-col justify-center items-center">
+            <span class="text-lg">4</span>
+            <span>Cart</span>
+        </button>
+    </div>
+
+    <!-- JavaScript Function to Load URL in Iframe -->
+    <script>
+        function loadPage(url) {
+            document.getElementById('contentFrame').src = url;
+        }
+    </script>
+</body>
 </html>
